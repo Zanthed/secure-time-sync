@@ -88,7 +88,7 @@ if ! ${SECURE_CURL} -s ${SELECTED_POOL} &>/dev/null; then
 fi
 
 # Extract the current time from the http header when connecting to one of the websites in the pool.
-NEW_TIME=$(${SECURE_CURL} ${SELECTED_POOL} 2>&1 | grep -i "Date" | sed -e 's/Date: //' | sed -e 's/date: //')
+NEW_TIME=$(${SECURE_CURL} ${SELECTED_POOL} 2>&1 | grep -i "^Date" | sed -e 's/Date: //' | sed -e 's/date: //')
 
 # Output the extracted time and selected pool for debugging.
 if [ "${DEBUG_TS}" = "1" ]; then
