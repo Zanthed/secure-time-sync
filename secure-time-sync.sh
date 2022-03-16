@@ -79,7 +79,7 @@ if [ "${use_tor}" = "true" ]; then
   SECURE_CURL="curl -sI --socks5-hostname localhost:9050"
 else
   # Protects against https downgrade attacks when not using Tor.
-  SECURE_CURL="curl -sI --tlsv1.2 --proto =https"
+  SECURE_CURL="curl -sI --tlsv1.3 --proto =https"
 fi
 
 if ! ${SECURE_CURL} -s ${SELECTED_POOL} &>/dev/null; then
