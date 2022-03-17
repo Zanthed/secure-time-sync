@@ -52,7 +52,7 @@ select_pool() {
 
   # DuckDuckGo.
   if [ "${use_tor}" = "true" ]; then
-    POOL[4]="https://3g2upl4pq6kufc4m.onion"
+    POOL[4]="https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"
   else
     POOL[4]="https://duckduckgo.com"
   fi
